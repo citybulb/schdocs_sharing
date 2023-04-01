@@ -64,13 +64,13 @@ $img_ext = strtolower(pathinfo($img_dir,PATHINFO_EXTENSION));
 
                     <?php if(strlen($row['name']) > 25) { ?> 
 
-                    <span><i class="fa fa-file-pdf"></i> <?php echo substr($row['name'], 0, 22)?>...</span>
+                    <span> <?php echo substr($row['name'], 0, 22)?>...</span>
 
                 <?php }
 
                 else { ?>
 
-                    <span><i class="fa fa-file-pdf"></i> <?php echo $row['name']?></span>
+                    <span> <?php echo $row['name']?></span>
 
                 <?php }?>
 
@@ -180,7 +180,7 @@ $img_ext = strtolower(pathinfo($img_dir,PATHINFO_EXTENSION));
 
                     <div id="prev" class="img-up p-3">
 
-                    <img src="pdf.png" class="block mx-auto" width="70px" height="70px">
+                    <img src="src/icons/pdf.png" class="block mx-auto" width="70px" height="70px">
 
                 </div>
 
@@ -190,7 +190,7 @@ $img_ext = strtolower(pathinfo($img_dir,PATHINFO_EXTENSION));
 
                     <div id="prev" class="img-up p-3">
 
-                    <img src="ppt.png" class="block mx-auto" width="70px" height="70px">
+                    <img src="src/icons/ppt.png" class="block mx-auto" width="70px" height="70px">
 
                 </div>
 
@@ -200,7 +200,7 @@ $img_ext = strtolower(pathinfo($img_dir,PATHINFO_EXTENSION));
 
                     <div id="prev" class="img-up p-3">
 
-                    <img src="word.png" class="block mx-auto" width="70px" height="70px">
+                    <img src="src/icons/word.png" class="block mx-auto" width="70px" height="70px">
 
                 </div>
 
@@ -216,13 +216,13 @@ $img_ext = strtolower(pathinfo($img_dir,PATHINFO_EXTENSION));
 
                     <?php if(strlen($row['name']) > 25) { ?> 
 
-                    <span><i class="fa fa-file-pdf"></i> <?php echo substr($row['name'], 0, 22)?>...</span>
+                    <span> <?php echo substr($row['name'], 0, 22)?>...</span>
 
                 <?php }
 
                 else { ?>
 
-                    <span><i class="fa fa-file-pdf"></i> <?php echo $row['name']?></span>
+                    <span> <?php echo $row['name']?></span>
 
                 <?php }?>
 

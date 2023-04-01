@@ -112,13 +112,13 @@ $img_ext = strtolower(pathinfo($img_dir,PATHINFO_EXTENSION));
 
                     <?php if(strlen($row['name']) > 25) { ?> 
 
-                    <span><i class="fa fa-file-pdf"></i> <?php echo substr($row['name'], 0, 22)?>...</span>
+                    <span> <?php echo substr($row['name'], 0, 22)?>...</span>
 
                 <?php }
 
                 else { ?>
 
-                    <span><i class="fa fa-file-pdf"></i> <?php echo $row['name']?></span>
+                    <span> <?php echo $row['name']?></span>
 
                 <?php }?>
 

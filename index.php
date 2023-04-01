@@ -11,8 +11,8 @@ require("inc/config/auth.php");
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Data center"> 
-    <meta name="keywords" content="Data center">
+    <meta name="description" content="SCH DOCS"> 
+    <meta name="keywords" content="SCH DOCS">
     
     <title>SCH DOCS</title>
 
@@ -166,6 +166,8 @@ require("inc/config/auth.php");
 
                 <script type="text/javascript">
 
+                    cur = "docs";
+
                     $('#add_v').load("ajaxl.php");
 
                 </script>      
@@ -222,7 +224,7 @@ $('#fid')[0].reset();
 
 $('#trash').click(function() {
 
-    let cur = "trash";
+    cur = "trash";
 
     $('#t-ap').html("Trash <i class='fa fa-caret-down'></i>");
 
@@ -234,12 +236,14 @@ $('#trash').click(function() {
 
     $('#recent').removeClass("active-t");
 
+    $('#grant').removeClass("active-t");
+
 
 });
 
 $('#recent').click(function() {
 
-    let cur = "recent";
+    cur = "recent";
 
     $('#t-ap').html("Recent <i class='fa fa-caret-down'></i>");
 
@@ -250,11 +254,13 @@ $('#recent').click(function() {
     $('#mydocs').removeClass("active-t");
 
     $('#trash').removeClass("active-t");
+
+    $('#grant').removeClass("active-t");
 });
 
 $('#mydocs').click(function() {
 
-    let cur = "docs";
+    cur = "docs";
 
     $('#t-ap').html("My Document <i class='fa fa-caret-down'></i>");
 
@@ -270,6 +276,8 @@ $('#mydocs').click(function() {
 });
 
 $('#grant').click(function() {
+
+    cur = "grant";
 
     $('#t-ap').html("Permissions - Grant <i class='fa fa-caret-down'></i>");
 
@@ -318,21 +326,36 @@ setInterval(function() {
 
 $('#search').on('keyup', function() {
 
+    $('#t-ap').html("Search <i class='fa fa-caret-down'></i>");
+
         if(this.value == "") {
 
             if(cur == "trash") {
 
+                $('#t-ap').html("Trash <i class='fa fa-caret-down'></i>");
+
                 $('#add_v').load("trash.php");
+            }
+
+            else if(cur == "recent") {
+
+                $('#t-ap').html("Recent <i class='fa fa-caret-down'></i>");
+
+                $('#add_v').load("recent.php");
             }
 
             else if(cur == "docs") {
 
+                $('#t-ap').html("My Document <i class='fa fa-caret-down'></i>");
+
                 $('#add_v').load("ajaxl.php");
             }
 
-            else {
+            else if(cur == "grant") {
 
-                $('#add_v').load("recent.php");
+                $('#t-ap').html("Permissions - Grant <i class='fa fa-caret-down'></i>");
+
+                $('#add_v').load("perms.php");
             }
 
         }
